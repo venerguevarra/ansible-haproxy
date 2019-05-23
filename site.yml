@@ -1,0 +1,14 @@
+- hosts: all
+  vars:
+    variable_to_be_replaced: 'Hello world'
+    inline_variable: 'hello again'
+  tasks:
+    - name: generate_file_using_template
+      template:
+        src: templates/hello_world.j2
+        dest: hello_world.txt
+
+    - name: copy_generated_file_to_remote
+      copy:
+        src: "hello_world.txt"
+        dest: /tmp
