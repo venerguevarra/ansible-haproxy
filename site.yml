@@ -7,8 +7,3 @@
       template:
         src: templates/hello_world.j2
         dest: /tmp/hello_world.txt
-
-    - name: copy_generated_file_to_remote
-      copy:
-        src: "/tmp/hello_world.txt"
-        dest: /tmp
