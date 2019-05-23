@@ -7,3 +7,4 @@
       template:
         src: templates/hello_world.j2
         dest: /tmp/hello_world.txt
+        force: yes
